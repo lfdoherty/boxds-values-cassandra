@@ -1,5 +1,14 @@
 
 exports.make = function(pool){
+
+	pool.execute('CREATE TABLE boxds_values ('+
+		'key varchar,'+
+		'data blob,'+
+		'last_sequence_id int,'+
+		'PRIMARY KEY (key)'+
+	');',function(){
+	})
+	
 	return {
 		exists: function(name, cb){
 			pool.execute('SELECT last_sequence_id FROM boxds_values WHERE key = ?', [name], 1,function(err, result){
