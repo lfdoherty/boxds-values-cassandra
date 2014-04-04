@@ -1,11 +1,10 @@
 {
   "name": "boxds-values-cassandra",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Cassandra plugin for boxds's value store.",
   "author": "Liam Doherty",
   "main": "values",
   "dependencies": {
-    "helenus": "~0.6.4"
   },
   "devDependencies": {},
   "scripts": {}
